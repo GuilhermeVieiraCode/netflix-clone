@@ -39,8 +39,8 @@ header nav a:hover{
 
 .principal{
     font-size: 16px;
-    background: linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70) 100%), url('../img/capa-witcher.jpg');
-    height: 400px;
+    background: linear-gradient(rgba(0,0,0,.70),rgba(0,0,0,.70) 100%), url('../img/originais/capa-witcher.jpg');
+    height: 500px;
     background-size: cover;
 
     display: flex;
@@ -94,15 +94,20 @@ header nav a:hover{
     width: 100%;
     display: block;
 }
-
+/*
 .box-filme:hover {
     transform: translate3D(0,-1px,0) scale(1.10);
-}
+}*/
 
 .carrossel-filmes{
-    margin-top: 4px;
+    margin-top: 8px;
+    margin-left: 24px;
 }
 
+.carrossel-filmes h3{
+    margin-bottom: 4px;
+    font-family: sans-serif;
+}
 
 /*Responsividade*/
 
