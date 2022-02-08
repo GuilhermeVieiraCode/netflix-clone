@@ -21,10 +21,86 @@ header .container{
     justify-content: space-between;
 }
 
+header .container div:first-child{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* div secundária do header*/
+header .container div:last-child i,a{
+    padding: 8px;
+    margin-right: 8px;
+}
+
+.dropdown-profile img{
+    width: 28px;
+    border-radius: 10%;
+}
+
+header .container div:last-child i:last-child{
+    padding: 4px;
+}
+
+header .container div:last-child a{
+    text-decoration: none;
+    color: #AAA;
+}
+
+header .container div:last-child a:hover{
+    color: #fff;
+}
+
+/* menu dropdow */
+.dropdown{
+    display: none;
+}
+
+/* dropdow do perfil */
+.dropdown-profile {
+    position: relative;
+    display:inline-block;
+    top: 8px;
+  }
+
+.dropdown-profile i{
+    position: relative;
+    display:inline-block;
+    bottom: 6px;
+}
+
+.dropdown-profile-content {
+    display: none;
+    position: absolute;
+    right: -30px;
+    top: 34px;
+    background-color: var(--preto);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+ 
+  .dropdown-profile-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  
+ 
+.dropdown-profile-content a:hover {background-color: var(--preto)}
+
+
+.dropdown-profile:hover .dropdown-profile-content {display: block;}
+
 header .logo{
     color: var(--vermelho);
     font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+    font-size: 24px;
+    padding: 8px;
+    margin-right: 8px;
 }
 
 header nav a{
@@ -112,15 +188,68 @@ header nav a:hover{
 /*Responsividade*/
 
 @media screen and (max-width:700px){
+    #infantil{
+        display: none;
+    }
+
     header .container{
         display: flex;
-        flex-direction: column;
     }
 
     .botao{
         margin-top: 8px;
         width: 70%;
     }
+
+    header .container div:first-child nav{
+        display: none;
+    }
+
+    .dropdown {
+        position: relative;
+        display:inline-block;
+        top: 2px;
+        right: 64px;
+    }
+
+    .dropdown i{
+        position: relative;
+        display: inline-block;
+        right: 16px;
+        top: 2px
+    }
+    
+    .dropdown a{
+        text-decoration: none;
+        color: white;
+      }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        left: -8px;
+        top: 24px;
+        background-color: var(--preto);
+        min-width: 116px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+      }
+      
+      
+      .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+      }
+      
+      
+    .dropdown-content a:hover {background-color: var(--preto)}
+    
+    
+    .dropdown:hover .dropdown-content {display: block;}
+
+    
 }
 
 @media screen and (min-witdh: 1000px){
